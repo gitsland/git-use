@@ -1,0 +1,1 @@
+SELECT corr(rental_rate, rental_duration) from film;
