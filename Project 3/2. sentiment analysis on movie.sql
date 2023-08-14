@@ -1,0 +1,1 @@
+select film_id, title, description from film;
