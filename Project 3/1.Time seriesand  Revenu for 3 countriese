@@ -1,0 +1,10 @@
+SELECT cy.country, p.amount, p.payment_date
+FROM payment p
+JOIN customer c ON p.customer_id = c.customer_id
+JOIN address a ON c.address_id = a.address_id
+JOIN city ct ON a.city_id = ct.city_id
+join country cy on ct.country_id = cy.country_id
+
+where cy.country in ('Mexico','China', 'Bangladesh')
+
+GROUP BY cy.country, p.amount, p.payment_date;
